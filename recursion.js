@@ -11,7 +11,7 @@ function findOddNumber(array) {
         }
 
         if (inputArray[0] % 2 !== 0) {
-            result.push(inputArray[0]);
+            result.push(inputArray[0]); 
         }
 
         helperRecursive(inputArray.slice(1));

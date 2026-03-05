@@ -30,3 +30,5 @@ function largestSum(array, num){
 
 const result = largestSum([1,2,3,4,3,5,4,6,7,8], 2)
 console.log(result)
+
+eric@sommras.com

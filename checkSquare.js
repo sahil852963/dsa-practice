@@ -15,7 +15,7 @@
 //             }
 //         }
 //     }
-//     return true;
+//     return true; 
 // }
 
 
@@ -48,4 +48,4 @@ function isSquareCheck2(arr1, arr2){
 } 
 
 const result = isSquareCheck2([1,2,4,2], [1,4,4,16]);
-console.log(result)
+console.log(result)     
