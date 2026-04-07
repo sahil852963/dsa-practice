@@ -35,3 +35,4 @@ function sortCheck(arr){
 sortCheck([2,3,1,4]);
 console.log(myArray);
 
+
