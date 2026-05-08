@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Practice</title>
+    <style>
+
+        #elem {
+            display: flex;
+        }
+        .div1{
+            border: 1px solid red;
+            text-align: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .div2{
+            border: 1px solid red;
+            text-align: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(54, 233, 179);
+        }
+
+        .div3{
+            border: 1px solid red;
+            text-align: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(82, 67, 221);
+        }
+    </style>
+</head>
+<body>
+    <h2>Mutation Observer</h2>
+    <div id="parentDiv">
+        <div contenteditable class="div1">div1</div>
+        <div contenteditable class="div2">div2</div>
+        <div contenteditable class="div3">div3</div>
+        <button onclick="deletediv()">Delete</button>
+    </div>
+</body>
+<script>
+    let observer = new MutationObserver((data) => {
+        console.log(data);
+        if(parentDiv.children[0]){
+            parentDiv.children[0].style.backgroundColor = 'brown';
+            parentDiv.children[0].style.color = 'white';
+        }
+
+        if(parentDiv.children[1]){
+            parentDiv.children[1].style.backgroundColor = 'brown';
+            parentDiv.children[1].style.color = 'white';
+        }
+    })
+
+    observer.observe(parentDiv, {
+        childList: true,
+    })
+    function deletediv(){
+        parentDiv.children[0]?.remove();
+    } 
+</script>
+</html>
+
+<!-- Optional chaining ?. cannot be used on the left side of assignment -->
+ <!-- like Below Example -->
+ <!-- parentDiv.children[0]?.style.backgroundColor = 'brown'; -->
